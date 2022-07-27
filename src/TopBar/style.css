@@ -13,4 +13,5 @@ header{
     width: 100%;
     color: #E8833A;
     left: 0;
+    z-index: 1;
 }
