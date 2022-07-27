@@ -1,10 +1,17 @@
 import react from "react";
-import ReactDOM from 'react-dom';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import TopBar from "../TopBar/TopBar";
+import InitialPage from "../InitialPage/InitialPage";
 
-function App (){
-    <>
-    </>
+export default function App (){
+   return( <>
+                <BrowserRouter>
+                    <TopBar />
+                    <Routes>
+                        <Route path='/' element={<InitialPage />} />
+                    </Routes>
+                </BrowserRouter>
+            </>
+    )
 }
 
-ReactDOM.render(App(),document.querySelector('.root'));

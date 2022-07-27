@@ -1,0 +1,15 @@
+header{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background-color: #C3CFD9;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Roboto'; */
+    font-weight: 400;
+    font-size: 34px;
+    width: 100%;
+    color: #E8833A;
+}
