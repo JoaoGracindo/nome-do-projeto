@@ -33,7 +33,32 @@ const Main = styled.div`
         flex-wrap:wrap;
     }
 
+    a{
+        width: 45%;
+        height: 210px;
+    }
+
 `;
+
+const Poster = styled.div`
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        box-sizing: border-box;
+        width: 95%;
+        height: 95%;
+
+    }
+    `;
 
 
 export default function InitialPage (){
@@ -56,16 +81,12 @@ export default function InitialPage (){
             <div>
                 {movieList.map(value => 
                     <Link to={`/sessoes/${value.id}`} key={value.id}>
-                        <Movie {...value} key={value.id}/>
+                        <Poster>
+                            <img src= {value.posterURL}/>
+                        </Poster>
                     </Link>)}
             </div>
 
         </Main>
     )
 }
-
-
-
-// <Link to={`/sessoes/${value.id}`}>
-// <Movie {...value} key={value.id}/>
-// </Link>
