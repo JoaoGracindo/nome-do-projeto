@@ -19,7 +19,7 @@ const Main = styled.div`
         justify-content:center;
     }
 
-    & :first-child{
+    & > :first-child{
         letter-spacing: 0.04em;
         color: #293845;
         font-weight: 400;
@@ -54,9 +54,18 @@ export default function InitialPage (){
                 Selecione o filme
             </div>
             <div>
-                {movieList.map(value => <Movie {...value} key={value.id}/>)}
+                {movieList.map(value => 
+                    <Link to={`/sessoes/${value.id}`} key={value.id}>
+                        <Movie {...value} key={value.id}/>
+                    </Link>)}
             </div>
 
         </Main>
     )
 }
+
+
+
+// <Link to={`/sessoes/${value.id}`}>
+// <Movie {...value} key={value.id}/>
+// </Link>
