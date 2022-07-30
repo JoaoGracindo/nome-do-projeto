@@ -41,7 +41,7 @@ const Showtimes = styled.div`
     align-items: center;
 
 
-    & div{
+    & a{
         width: 82px;
         height: 43px;
         font-family: 'Roboto';
@@ -54,7 +54,7 @@ const Showtimes = styled.div`
         justify-content: center;
         letter-spacing: 0.02em;
         margin-left: 8px;
-
+        text-decoration: none;
         background-color: #E8833A;
         border-radius: 3px;
         color: #FFFFFF;
@@ -128,7 +128,7 @@ export default function Movie (){
             <div>
                 <Dia>{weekday} - {date}</Dia>
                 <Showtimes>
-                    {showtimes.map((v) => <div>{v.name}</div>)}
+                    {showtimes.map((v) => <Link to={`/assentos/${v.id}`} key={v.id}>{v.name}</Link>)}
                 </Showtimes>
             </div>
         )
@@ -136,7 +136,7 @@ export default function Movie (){
 
     if(!movie){
         return ''
-    }else{
+    }
         return (
             <>
                 <Main> 
@@ -152,5 +152,3 @@ export default function Movie (){
              </>
         )
     }
-
-}

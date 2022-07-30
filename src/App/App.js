@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import TopBar from "../TopBar/TopBar";
 import InitialPage from "../InitialPage/InitialPage";
 import Movie from "../Movie/Movie";
+import Seats from '../Seats/Seats'
 
 export default function App (){
    return( <>
@@ -11,6 +12,7 @@ export default function App (){
                     <Routes>
                         <Route path='/' element={<InitialPage />} />
                         <Route path="/sessoes/:idFilme" element={<Movie />} />
+                        <Route path="/assentos/:idSessao" element={<Seats />} />
                     </Routes>
                 </BrowserRouter>
             </>
